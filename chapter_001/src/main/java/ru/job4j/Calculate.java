@@ -1,5 +1,5 @@
 /**
-JavaDoc для класса ru.job4j.
+JavaDoc for class ru.job4j.
 **/
 
 package ru.job4j;
@@ -7,7 +7,7 @@ package ru.job4j;
 public class Calculate{
 
 /**
-JavaDoc для метода main.
+JavaDoc for method main.
 **/
 
 	public static void main(String[] args){
