@@ -1,3 +1,7 @@
+* @author Viktoria Koleskina (mailto:viktoriakoleskina@yandex.ru)
+* @version $Id$
+* @since 0.1
+
 /**
 JavaDoc for class ru.job4j.
 **/
