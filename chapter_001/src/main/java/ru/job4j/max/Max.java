@@ -13,7 +13,7 @@
 /**
 * @param first **first parameter**
 * @param second **sec parameter**
-* @return **sec parameter**
+* @return **return return**
      */
 	 public int max(int first, int second) {
 		this.maxValue = first < second ? second : first;
