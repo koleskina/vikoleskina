@@ -13,7 +13,7 @@ public class Paint {
 	String piramid(int h) {
 		StringBuilder builder = new StringBuilder();
 		for (int i = 0; i < h; i++) {
-			for (int j = 0; j < h * 2-1; j++) {
+			for (int j = 0; j < h * 2 - 1; j++) {
 				if (j > h - 2 - i && j < h + i) {
 					builder.append("^");
 				} else {
