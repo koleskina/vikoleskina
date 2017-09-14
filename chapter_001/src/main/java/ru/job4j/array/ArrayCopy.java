@@ -17,10 +17,10 @@ public class ArrayCopy {
 		int[] array3 = new int[array1.length + array2.length];
 		for (int i = 0; i < array3.length; i++) {
 			if (first > array1.length - 1) {
-				array3[i] = array2[second];
+				System.arraycopy (array2, second, array3, i, 1);
 				second++;
 			} else if (second > array2.length - 1) {
-				array3[i] = array1[first];
+				System.arraycopy (array1, first, array3, i, 1);
 				first++;
 			} else if (array1[first] < array2[second]) {
 				array3[i] = array1[first];
