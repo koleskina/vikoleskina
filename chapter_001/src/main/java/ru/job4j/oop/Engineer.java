@@ -29,7 +29,7 @@ public class Engineer extends Profession {
      * @return return return
      */
     public String instruct(Teacher te) {
-        String ins =  "Инженер " + this.getName() + " инструктирует " + te.getName();
+        String ins =  "Инженер " + getName() + " инструктирует " + te.getName();
         return ins;
     }
 }
