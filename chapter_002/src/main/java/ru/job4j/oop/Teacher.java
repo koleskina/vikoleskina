@@ -30,7 +30,7 @@ public class Teacher extends Profession {
      * @return return return
      */
     public String teach(Doctor doc) {
-        String tea = "Учитель " + this.name + " обучает " + doc.getName();
+        String tea = "Учитель " + getName() + " обучает " + doc.getName();
         return tea;
     }
 }
