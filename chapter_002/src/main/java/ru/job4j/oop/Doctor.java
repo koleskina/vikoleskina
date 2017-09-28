@@ -29,7 +29,7 @@ public class Doctor extends Profession {
      * @return return return
      */
     public String medicate(Engineer en) {
-        String med = "Доктор " + this.name + " лечит " + en.getName();
+        String med = "Доктор " + getName() + " лечит " + en.getName();
         return med;
     }
 }
