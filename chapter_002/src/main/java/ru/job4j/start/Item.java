@@ -41,6 +41,10 @@ public class Item {
 	public String getDescription() {
 		return this.description;
 	}
+	/*** @param description **first parameter***/
+	public void setDescription(String description) {
+		this.description = description;
+	}
 	/*** getCreate.
 	 * * @return this.create*/
 	public long getCreate() {
@@ -55,4 +59,5 @@ public class Item {
 	public void setId(String id) {
 		this.id = id;
 	}
+
 }
