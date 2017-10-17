@@ -39,6 +39,7 @@ public class Tracker {
 		for (int index = 0; index != this.position; index++) {
 			if (items[index].getId().equals(item.getId())) {
 				items[index].setName(item.getName());
+				items[index].setDescription(item.getDescription());
 			}
 		}
 		return item;
@@ -93,9 +94,8 @@ public class Tracker {
 		Item result = null;
 		for (Item item : items) {
 			if (item != null && item.getId().equals(id)) {          //проверяем чтобы обьект был не null, у обьекта айтем дергаем метод гетайди, и у уже возвращаемого Стринг вызываем метод иэквалс который сравнивает его с нашим входязщим параметром айди
-				result = item;                                      //если равен то мы делаем присвоение этого айтема к нашему резалту
-			} else {
-				result = null;
+				result = item;
+				break; //если равен то мы делаем присвоение этого айтема к нашему резалту
 			}
 		}
 		return result;
