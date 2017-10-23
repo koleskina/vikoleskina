@@ -39,7 +39,7 @@ public class StartUITest {
     @Test
     public void deleteItemTest() {
         Tracker tracker = new Tracker();
-        Item item1= tracker.add(new Item("test1", "testDescription", 123L));
+        Item item1 = tracker.add(new Item("test1", "testDescription", 123L));
         Item item2 = tracker.add(new Item("test2", "test2Description", 123L));
         Item item3 = tracker.add(new Item("test3", "test3Description", 123L));
         Input input = new StubInput(new String[]{"3", item1.getId(), "6"});
@@ -53,10 +53,10 @@ public class StartUITest {
     @Test
     public void findItemByNameTest() {
         Tracker tracker = new Tracker();
-        Item item1= tracker.add(new Item("test1", "1testDescription", 123L));
+        Item item1 = tracker.add(new Item("test1", "1testDescription", 123L));
         Item item2 = tracker.add(new Item("test2", "2testDescription", 123L));
         Item item3 = tracker.add(new Item("test1", "3testDescription", 123L));
-        Input input = new StubInput(new String[]{"5",item1.getName(),"6"});
+        Input input = new StubInput(new String[]{"5", item1.getName(), "6"});
         Item[] result = tracker.findByName("test1");
         Item[] expect = {item1, item3};
         new StartUIMain(input, tracker).init();
@@ -66,10 +66,10 @@ public class StartUITest {
     @Test
     public void findItemById() {
         Tracker tracker = new Tracker();
-        Item item1= tracker.add(new Item("test1", "1testDescription", 123L));
+        Item item1 = tracker.add(new Item("test1", "1testDescription", 123L));
         Item item2 = tracker.add(new Item("test2", "2testDescription", 123L));
         Item item3 = tracker.add(new Item("test3", "3testDescription", 123L));
-        Input input = new StubInput(new String[]{"4",item1.getId(),"6"});
+        Input input = new StubInput(new String[]{"4", item1.getId(), "6"});
         Item result = tracker.findById(item1.getId());
         Item expect = item1;
         new StartUIMain(input, tracker).init();
@@ -79,7 +79,7 @@ public class StartUITest {
     @Test
     public void showAllItem() {
         Tracker tracker = new Tracker();
-        Item item1= tracker.add(new Item("test1", "testDescription", 123L));
+        Item item1 = tracker.add(new Item("test1", "testDescription", 123L));
         Item item2 = tracker.add(new Item("test2", "test2Description", 123L));
         Item item3 = tracker.add(new Item("test3", "test3Description", 123L));
         Input input = new StubInput(new String[]{"1", "6"});
