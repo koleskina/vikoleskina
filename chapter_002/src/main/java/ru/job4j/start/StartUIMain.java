@@ -5,6 +5,7 @@ public class StartUIMain {
 
     /**
      * @param input **first parameter**
+     * @param tracker **sec parameter**
      */
     public StartUIMain(Input input, Tracker tracker) {                       //сделать инициализацию в качестве конструктора
         this.input = input;
