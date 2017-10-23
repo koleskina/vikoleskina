@@ -1,20 +1,17 @@
 package ru.job4j.start;
-
+//Данный класс использует Консоль, требует ввода данных от пользователя, и этот класс является основным.
 /**StartUIMain.**/
 public class StartUIMain {
-    /*** @param args **first parameter***/
-    public static void main(String[] args) {        //в качестве параметра мы можем передавать любой обьект который реализует интерфейс input
-        //Input input = new StubInput(new String[] {"create stub task"});
-        Input input = new ConsoleInput();           //далее сделаем инициализацию нашей консоли
-        new StartUIMain(input).init();
-    }
+
     /**
      * @param input **first parameter**
      */
-    public StartUIMain(Input input) {                       //сделать инициализацию в качестве конструктора
+    public StartUIMain(Input input, Tracker tracker) {                       //сделать инициализацию в качестве конструктора
         this.input = input;
+        this.tracker = tracker;
     }
-
+    /*** @param tracker.*/
+    private Tracker tracker = new Tracker();
     /*** @param Input.*/
     private Input input;                                //создание обьекта
     /*** @param ADD_NEW_ITEM.*/
@@ -32,6 +29,7 @@ public class StartUIMain {
     /*** @param EXIT.*/
     private static final String EXIT = "6";                  //Ключи меню вынесем в константы
     /**init.**/
+
     public void init() {
         System.out.println("0. Add new Item\n"
                 + "1. Show all items\n"
@@ -43,6 +41,7 @@ public class StartUIMain {
         String name = input.ask("Введите номер задачи: "); //из метода аск мы передаем вопрос который хотим получить в наш метод
         this.chooseMenu(name);
     }
+
     /*** @param value **first parameter***/
     public void chooseMenu(String value) {
         if (ADD_NEW_ITEM.equals(value)) {
@@ -68,8 +67,6 @@ public class StartUIMain {
             this.exit();
         }
     }
-    /*** @param tracker.*/
-   private Tracker tracker = new Tracker();
 /** add.**/
     public void add() {
         String name = input.ask("Введите имя: ");
@@ -129,6 +126,13 @@ public class StartUIMain {
     /** exit.**/
     public void exit() {
                 System.out.println("Вы вышли из программы");
+    }
+    /*** @param args **first parameter***/
+    public static void main(String[] args) {        //в качестве параметра мы можем передавать любой обьект который реализует интерфейс input
+        Tracker tracker = new Tracker();
+        //Input input = new StubInput(new String[] {"create stub task"});
+        Input input = new ConsoleInput();           //далее сделаем инициализацию нашей консоли
+        new StartUIMain(input, tracker).init();
     }
 }
 
